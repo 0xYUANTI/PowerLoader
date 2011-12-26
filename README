@@ -1,0 +1,32 @@
+
+                         P O W E R L O A D E R
+                         ~~~~~~~~~~~~~~~~~~~~~
+
+(1) Edit host/1, port/1, handle/1, and chan/1 in powerloader.pl
+(2) Start an SWI listener, consult and run PowerLoader:
+
+    ?- [powerloader].
+    ?- start.
+
+(3) Interact with the bot by sending commands to the channel:
+
+    10:43 *** blargbot JOIN
+    10:43 <blit> !load paranoia
+    10:43 <blit> !target
+    10:43 <blargbot> Target: none
+    10:43 <blit> !register
+    10:43 <blargbot> blit: The operation succeeded.
+    10:43 <blit> !target 10
+    10:43 <blargbot> Target: 10
+    10:43 <blit> !bid 5
+    10:43 <blargbot> Target: 15
+    10:43 <blit> !roll
+    10:43 <blargbot> blit: 20 [15] (failure)
+    10:44 <blit> !quit
+    10:44 *** blargbot QUIT Client Quit
+
+The bot knows only three commands by default: !load, !unload, and !quit.
+Functionality is added by writing extension modules. See the comments
+in powerloader.pl and the example module (paranoia.pl) for details.
+
+// eof
